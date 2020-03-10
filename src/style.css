@@ -1,0 +1,50 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    color: rgb(44, 44, 44);
+    font-family: 'Roboto', sans-serif;
+
+}
+
+body {
+    background-color: #f5f4f4;
+}
+
+nav {
+    background-color: white;
+}
+
+nav ul {
+    padding: 10px;
+}
+
+nav ul li {
+    display: inline;
+    padding: 10px;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    padding: 10px;
+}
+
+input {
+    margin: 10px 10px;
+    display: block;
+    width: 250px;
+}
+
+button {
+    margin-left: 10px;
+    width: 250px;
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+}
+
+.comment {
+    background-color: white;
+    padding: 10px;
+    margin: 10px;
+}
