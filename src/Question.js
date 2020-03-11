@@ -28,8 +28,8 @@ class Question extends Component {
             <>
                 <h1>{question.title}</h1>
                 <p>{question.question}</p>
-                {comments}
                 <PostAnswer submit={(answer, id) => this.submit(answer, id)} onClick={_ => this.clicked()}></PostAnswer>
+                {comments}
             </>
         );
     }
