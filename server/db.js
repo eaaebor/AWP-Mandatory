@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 // Connect to the database
 try {
-    const url = 'mongodb+srv://dbUserstackbro:<awpmanda123>@cluster0-xuwin.mongodb.net/test?retryWrites=true&w=majority';
+    const url =  process.env.MONGODB_URL || 'mongodb://localhost/my_database';
     mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true});
 } catch (e) {
     console.error(e)
