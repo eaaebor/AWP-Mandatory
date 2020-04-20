@@ -5,8 +5,7 @@ class AskQuestion extends Component {
         super(props);
         this.state = {
             title: "",
-            desc: "",
-            comments: []
+            desc: ""
         }
     }
 
@@ -16,8 +15,21 @@ class AskQuestion extends Component {
         })
     }
 
-    onSubmit() {
-        this.props.submit(this.state.title, this.state.desc, this.state.comments);
+    async onSubmit() {
+        // this.props.submit(this.state.answer, this.state.id);
+        let response = await fetch(`http://localhost:8080/api/askquestion/`, {
+        headers: {
+            'Content-Type': 'application/json'
+        },    
+        method: 'PUT',
+            mode: 'cors',
+            body: JSON.stringify({
+                title: this.state.title,
+                desc: this.state.desc
+            })
+        })
+        const data = await response.json();
+        console.log("Here's the response: ", data)
     }
 
     render() {

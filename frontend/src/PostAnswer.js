@@ -7,14 +7,30 @@ class PostAnswer extends Component {
         }
     }
 
+    
+
     onChange(event) {
         this.setState({
+            id: this.props.data,
             [event.target.name]: event.target.value
         })
     }
 
-    onSubmit() {
-        this.props.submit(this.state.answer, this.state.id);
+    async onSubmit() {
+        // this.props.submit(this.state.answer, this.state.id);
+        let response = await fetch(`http://localhost:8080/api/questions/${this.state.id}`, {
+        headers: {
+            'Content-Type': 'application/json'
+        },    
+        method: 'PUT',
+            mode: 'cors',
+            body: JSON.stringify({
+                id: this.state.id,
+                answer: this.state.answer
+            })
+        })
+        const data = await response.json();
+        console.log("Here's the response: ", data)
     }
 
     render() {

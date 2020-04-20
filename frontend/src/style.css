@@ -47,4 +47,15 @@ a {
     background-color: white;
     padding: 10px;
     margin: 10px;
+    width: 600px;
+}
+
+.btn {
+    width: 80px;
+    display: block;
+    margin-top: 10px;
+}
+
+.votes {
+    float: right;
 }

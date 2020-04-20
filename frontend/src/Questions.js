@@ -5,7 +5,7 @@ class Questions extends Component {
     
     render() {
         let questions = this.props.data;
-        const list = questions.map((d) => <Link to={"/question/"+d.id}><li key={d.title}>{d.title}</li></Link>);
+        const list = questions.map((d) => <Link  key={Math.random()} to={"/question/"+d._id}><li>{d.text}</li></Link>);
 
         
 
