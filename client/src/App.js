@@ -6,6 +6,7 @@ import Questions from './Questions';
 import './style.css'
 
 class App extends Component {
+    API_URL = process.env.REACT_APP_API_URL;
     constructor(props) {
         super(props);
 
@@ -19,7 +20,7 @@ class App extends Component {
     }
 
     async getQuestions(){
-        let response = await fetch("http://localhost:8080/api/questions")
+        let response = await fetch(`${this.API_URL}/questions`)
         let data = await response.json()
         this.setState({
             questions: data

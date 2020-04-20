@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
 class AskQuestion extends Component {
+    API_URL = process.env.REACT_APP_API_URL;
     constructor(props) {
         super(props);
         this.state = {
@@ -17,7 +18,7 @@ class AskQuestion extends Component {
 
     async onSubmit() {
         // this.props.submit(this.state.answer, this.state.id);
-        let response = await fetch(`http://localhost:8080/api/askquestion/`, {
+        let response = await fetch(`${this.API_URL}/askquestion`, {
         headers: {
             'Content-Type': 'application/json'
         },    

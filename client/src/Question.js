@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import PostAnswer from "./PostAnswer";
 
 class Question extends Component {
+    API_URL = process.env.REACT_APP_API_URL;
     constructor(props) {
         super(props);
         this.state = {
@@ -18,7 +19,7 @@ class Question extends Component {
     }
 
     async updateVote(id, vote){
-        let response = await fetch(`http://localhost:8080/api/vote/`, {
+        let response = await fetch(`${this.API_URL}/vote`, {
         headers: {
             'Content-Type': 'application/json'
         },    
