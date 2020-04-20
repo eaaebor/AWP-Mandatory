@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 // Connect to the database
 try {
-    const url = 'mongodb+srv://dbUserstackbro:<aylmao123>@cluster0-xuwin.mongodb.net/test?retryWrites=true&w=majority';
+    const url = 'mongodb+srv://dbUserstackbro:<awpmanda123>@cluster0-xuwin.mongodb.net/test?retryWrites=true&w=majority';
     mongoose.connect(url, {useNewUrlParser: true, useUnifiedTopology: true});
 } catch (e) {
     console.error(e)
